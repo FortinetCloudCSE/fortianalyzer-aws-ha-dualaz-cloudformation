@@ -1,7 +1,1 @@
-# Fortinet Template Repo for TECWorkshops
-
-## Prereqs
-  - Docker
- 
-## How to use this repo:
-https://fortinetcloudcse.github.io/UserRepo/index.html
+<h1>fortianalyzer-aws-ha-dualaz-cloudformation</h1><h3>To view the workshop, please go here: <a href=https://fortinetcloudcse.github.io/fortianalyzer-aws-ha-dualaz-cloudformation/>fortianalyzer-aws-ha-dualaz-cloudformation</a></h3><hr><h3>For more information on creating these workshops, please go here: <a href=https://fortinetcloudcse.github.io/UserRepo/>FortinetCloudCSE User Repo</a></h3>
