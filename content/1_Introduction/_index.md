@@ -4,11 +4,11 @@ menuTitle: "Introduction"
 weight: 10
 ---
 
-![](./fmg-diag.png)
+![](./faz-diag1.png)
 
 ## Welcome
 
-The purpose of this site is to provide a quick start guide for using Infrastructure as Code (IaC) templates located in the repo [**fortimanager-aws-ha-dualaz-cloudformation**](https://github.com/FortinetCloudCSE/fortimanager-aws-ha-dualaz-cloudformation).
+The purpose of this site is to provide a quick start guide for using Infrastructure as Code (IaC) templates located in the repo [**fortianalyzer-aws-ha-dualaz-cloudformation**](https://github.com/FortinetCloudCSE/fortianalyzer-aws-ha-dualaz-cloudformation).
 
 Reference the prerequisites and deployment sections on this site to get started.
 
