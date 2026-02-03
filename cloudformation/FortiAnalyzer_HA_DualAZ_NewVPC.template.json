@@ -1,6 +1,6 @@
 {
 	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "(v9.0) AWS CFT to deploy a FortiAnalyzer HA pair into a new VPC",
+	"Description": "(v9.1) AWS CFT to deploy a FortiAnalyzer HA pair into a new VPC",
 	"Metadata": {
 		"AWS::CloudFormation::Interface": {
 			"ParameterGroups": [
@@ -164,41 +164,29 @@
 		},
 		"InstanceType": {
 			"Type": "String",
-			"Default": "m5.2xlarge",
+			"Default": "m6i.2xlarge",
 			"Description": "Select the instance type for the FortiAnalyzers.  *** If using PAYG2Devices for LicenseType, you can only use up to a m5.xlarge. Check current Marketplace listings for PAYG options to confirm instance type selected is supported. ***",
 			"AllowedValues": [
-				"m5.xlarge",
 				"m5.2xlarge",
 				"m5.4xlarge",
 				"m5.8xlarge",
-				"m5.12xlarge",
-				"m6i.xlarge",
-				"m6i.2xlarge",
-				"m6i.4xlarge",
-				"m6i.8xlarge",
-				"m6i.16xlarge",
-				"m6i.32xlarge",
-				"h1.2xlarge",
-				"h1.4xlarge",
-				"h1.8xlarge",
-				"h1.16xlarge",
-				"m6a.xlarge",
+				"m5.16xlarge",
 				"m6a.2xlarge",
 				"m6a.4xlarge",
 				"m6a.8xlarge",
 				"m6a.16xlarge",
-				"m6a.32xlarge",
-				"m7a.xlarge",
+				"m6i.2xlarge",
+				"m6i.4xlarge",
+				"m6i.8xlarge",
+				"m6i.16xlarge",
 				"m7a.2xlarge",
 				"m7a.4xlarge",
 				"m7a.8xlarge",
-				"m7a.16xlarge",
-				"m7a.32xlarge"
+				"m7a.16xlarge"
 			]
 		},
 		"CIDRForInstanceAccess": {
 			"Type": "String",
-			"Default": "0.0.0.0/0",
 			"Description": "Provide a network CIDR from which the FortiAnalyzer instances will be accessed",
 			"AllowedPattern": "(\\d{1,3}\\.){3}\\d{1,3}/\\d{1,2}",
 			"ConstraintDescription": "Must be a valid CIDR block format."
@@ -222,7 +210,7 @@
 		"FortiAnalyzerVersion": {
 			"Type": "String",
 			"Default": "7.6.x",
-			"Description": "Select the verion of FortiAnalyzer to use (latest GA AMI will be used)",
+			"Description": "Select the license type for the FortiAnalyzers. *** PAYGSCALE is only available with 7.6.x **",
 			"AllowedValues": [
 				"7.4.x",
 				"7.6.x"
@@ -234,6 +222,7 @@
 			"AllowedValues": [
 				"BYOL",
 				"Flex",
+				"PAYGSCALE",
 				"PAYG10Devices",
 				"PAYG30Devices",
 				"PAYG100Devices",
@@ -279,6 +268,7 @@
 			"7.6.x": {
 				"BYOL": "FortiAnalyzer-VM64-AWS *(7.6.*)*|9ipdy7tpkp24kmfsjgfuymny1",
 				"Flex": "FortiAnalyzer-VM64-AWS *(7.6.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"PAYGSCALE": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|cec7udm5mw3mt09v83hmjmz5p",
 				"PAYG2Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|9dtuu71e8jl604ce11efi1mzo",
 				"PAYG10Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|5fjrlla50pzzq1c8064gnm11n",
 				"PAYG30Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|f260v7j9fwdvlcsbnpsjpaozc",
