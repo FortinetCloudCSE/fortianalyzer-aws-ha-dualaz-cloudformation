@@ -7,6 +7,7 @@ weight: 20
 Before attempting to create a stack with the template, a few prerequisites should be checked to ensure a successful deployment:
 1.	An AMI subscription must be active for the FortiAnalyzer license type being used in the template.
     * [**BYOL Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-6dt7z5twj7t7a)
+    * [**PAYG SCALE Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-wy43e3tw4wm3e)
     * [**PAYG (Max 2 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-h2lf6do2y4y4g)
     * [**PAYG (Max 10 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-wabutfmgsmt4s)
     * [**PAYG (Max 30 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-cnr3vweexbiro)
@@ -23,4 +24,4 @@ Before attempting to create a stack with the template, a few prerequisites shoul
 
 6.  **Ensure that the PublicSubnet's AWS route table has a default route to an AWS Internet Gateway, otherwise bootstrapping and licensing will fail.**  Reference [**AWS Documentation**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#route-tables-internet-gateway) for further information.
 
-8. If PAYG licensing is to be used, you will need to configure HA peers as the serial numbers are generated on first boot. First login via SSH or serial console and get the serial number ```get system status```, then register this in FortiCloud. Next, reboot the instances ```exec reboot```. In the GUI navigate to **Sytem Settings > HA** and add the primary interface IP and serial number of the HA peer on both instances.
+7. If PAYG licensing is to be used, you will need to configure HA peers as the serial numbers are generated on first boot. First login via SSH or serial console and get the serial number ```get system status```, then register this in FortiCloud. Next, reboot the instances ```exec reboot```. In the GUI navigate to **Sytem Settings > HA** and add the primary interface IP and serial number of the HA peer on both instances.
